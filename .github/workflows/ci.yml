@@ -5,12 +5,16 @@ on:
     branches: [ '*', '!gh-pages' ]
   pull_request:
     branches: [ '*', '!gh-pages' ]
+  workflow_dispatch:
+    inputs:
+      via:
+          description: 'trigger origin'
+          required: true
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [windows-latest, macos-latest, ubuntu-latest]
     timeout-minutes: 10
-
     strategy:
       matrix:
         node-version: [14.x]
