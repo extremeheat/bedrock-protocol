@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.10",
-    "bedrock-provider": "^1.0.0",
+    "bedrock-provider": "^2.1.0",
     "babel-eslint": "^10.1.0",
     "mocha": "^8.3.2",
     "protodef-yaml": "^1.1.0",
