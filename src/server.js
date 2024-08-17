@@ -138,10 +138,12 @@ class Server extends EventEmitter {
   }
 
   async close (disconnectReason = 'Server closed') {
+    console.log('Closing server...')
     for (const caddr in this.clients) {
       const client = this.clients[caddr]
       client.disconnect(disconnectReason)
     }
+    console.log('Clients kicked')
 
     clearInterval(this.serverTimer)
     this.clients = {}
@@ -150,6 +152,7 @@ class Server extends EventEmitter {
     // Allow some time for client to get disconnect before closing connection.
     await sleep(60)
     this.raknet.close()
+    console.log('Server Closed')
   }
 }
 
