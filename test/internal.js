@@ -208,7 +208,10 @@ async function requestChunks (version, x, z, radius) {
 async function timedTest (version, timeout = 1000 * 220) {
   await waitFor((resolve, reject) => {
     // mocha eats up stack traces...
-    startTest(version, resolve).catch(reject)
+    startTest(version, resolve).catch((e) => {
+      console.error(e)
+      reject(e)
+    })
   }, timeout, () => {
     throw Error('timed out')
   })
