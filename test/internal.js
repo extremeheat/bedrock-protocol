@@ -125,6 +125,7 @@ async function startTest (version = CURRENT_VERSION, ok) {
   console.log('Started client')
 
   client.once('resource_packs_info', (packet) => {
+    console.log('Recv resource_packs_info')
     client.write('resource_pack_client_response', {
       response_status: 'completed',
       resourcepackids: []
@@ -145,9 +146,11 @@ async function startTest (version = CURRENT_VERSION, ok) {
   client.once('spawn', () => {
     console.info('Client spawend!')
     setTimeout(() => {
+      console.log('Closing client')
       client.close()
-
+      console.log('Closing server')
       server.close().then(() => {
+        console.log('Server closed')
         ok?.()
       })
     }, 500)
