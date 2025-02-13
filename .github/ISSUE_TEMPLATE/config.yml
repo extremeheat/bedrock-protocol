@@ -5,4 +5,4 @@ contact_links:
     about: Please make a post in our Github Discussions for questions and support requests.
   - name: Discord
     url: https://discord.gg/GsEFRM8
-    about: For questions about usage or the project, you may ask on our Discord in the #bedrock room. For help contributing, you may ask in #contribute.
+    about: 'For questions about library usage or the project, you may ask on our Discord in the #bedrock room. For help contributing, you may ask in #contribute.'
