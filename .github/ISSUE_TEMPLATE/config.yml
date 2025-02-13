@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Github Discussions
-    url: https://github.com/PrismarineJS/mineflayer/discussions
+    url: https://github.com/PrismarineJS/bedrock-protocol/discussions
     about: Please make a post in our Github Discussions for questions and support requests.
   - name: Discord
     url: https://discord.gg/GsEFRM8
