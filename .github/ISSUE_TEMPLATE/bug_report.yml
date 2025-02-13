@@ -21,7 +21,7 @@ body:
   - type: input
     id: versions_mineflayer
     attributes:
-      label: Mineflayer version
+      label: bedrock-protocol version
       description: Enter the version of bedrock-protocol you are using (e.g., 3.39.0). You can find the version of mineflayer by running `npm view bedrock-protocol`.
     validations:
       required: true
